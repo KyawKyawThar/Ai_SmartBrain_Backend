@@ -13,9 +13,10 @@ const db = knex({
   client: 'pg',
   connection: {
     host: 'postgresql-adjacent-84048', //localhost
-    user: 'kkt', //add your user name for the database here
-    password: '', //add your correct password in here
-    database: 'ai-smartbrain', //add your database name you created here
+    connectionString: process.env.DATABASE_URL,
+    ssl: {
+      rejectUnauthorized: false,
+    }, //add your database name you created here
   },
 });
 const app = express();
