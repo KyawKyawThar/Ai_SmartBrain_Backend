@@ -16,7 +16,7 @@ const db = knex({
     connectionString: process.env.DATABASE_URL,
     ssl: {
       rejectUnauthorized: false,
-    }, //add your database name you created here
+    },
   },
 });
 const app = express();
